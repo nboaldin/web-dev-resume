@@ -1,0 +1,23 @@
+extends layout
+block content
+  .jumbotron
+    .container
+      .row
+        .col-lg
+          h1.display-4.pink-text #{title}
+          p.pink-text #{headerSub}
+        .col-lg
+  .container
+    h2 Go For It
+  .container.form-wrap
+      p.red-text #{msg}
+      form(action='/blog-post', method='POST')
+        .form-row
+          .form-group.col-md-6
+            label(for='inputTitle') Title
+            input.form-control(type='text', name='title', placeholder='Blog post title')
+          .form-group.col-12
+            label(for='inputPost') Post
+            textarea.form-control(type='text', name='post' placeholder='Tell them something good...', rows='10')
+          .form-group.col-12
+            button.btn.btn-primary.py-3.px-5(type='submit') Post It

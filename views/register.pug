@@ -1,0 +1,28 @@
+extends layout
+block content
+  .jumbotron
+    .container
+      .row
+        .col-lg
+          h1.display-4.pink-text #{title}
+          p.pink-text #{headerSub}
+        .col-lg
+  .container
+    h2 Use My Site
+  .container.form-wrap
+      p.red-text #{msg}
+      form(action='/register', method='POST')
+        .form-row.col-6
+          .form-group
+            label(for='inputName') Name
+            input.form-control(type='text', name='name', placeholder='Your name here', autocomplete='name')
+          .form-group
+            label(for='inputEmail4') Email
+            input.form-control(type='email', name='email', placeholder='Your email here', autocomplete='email')
+          .form-group
+            label(for='pw') Password:
+            input#pw.form-control(type='password' name='password')
+          .form-group
+            label(for='pw2') Confirm Password:
+            input#pw2.form-control(type='password' name='confirmPassword')
+          button.btn.btn-primary(type='submit') Sign up

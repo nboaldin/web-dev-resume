@@ -1,0 +1,24 @@
+button {
+  font-family: $font-stack-primary;
+}
+
+.btn-primary {
+  background-image: none;
+  color: $yellow-green;
+  background-color: $bright-pink;
+  border-color: $yellow-green;
+}
+
+.btn-primary a {
+  color: $yellow-green;
+}
+
+.btn-primary:hover a {
+  color: $bright-pink;
+}
+
+.btn-primary:focus, .btn-primary:hover {
+    color: $bright-pink;
+    background-color: $yellow-green;
+    border-color: $bright-pink;
+}

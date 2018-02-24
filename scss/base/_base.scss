@@ -1,0 +1,43 @@
+body {
+  background-color: $bright-green;
+  font-family: $font-stack-secondary;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-stack-primary;
+  color: $black;
+}
+
+a {
+  color: $black;
+}
+
+a:active, a:hover {
+  color: $bright-pink;
+}
+
+.about-list {
+  color: $yellow-green;
+}
+
+li {
+  list-style: none;
+}
+
+.list-group {
+    border-radius: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.progress-bar {
+  background: linear-gradient(to right, $yellow-green, $bright-pink);
+}
+
+.background-color-black {
+  background-color: $black;
+}
+
+.form-wrap {
+  margin-bottom: 50px;
+}

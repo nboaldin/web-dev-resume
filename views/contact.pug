@@ -1,0 +1,28 @@
+extends layout.pug
+block content
+  .jumbotron
+    .container
+      .row
+        .col-lg
+          h1.display-4.pink-text #{title}
+          p.pink-text #{headerSub}
+        .col-lg
+          div(style='width:100%;height:0;padding-bottom:43%;position:relative;')
+            iframe.giphy-embed(src='https://giphy.com/embed/1x3tGWeGeG9oY', width='100%', height='100%', style='position:absolute', frameborder='0', allowfullscreen='')
+  .container
+    h2 Contact
+  .container.form-wrap
+      p.red-text #{msg}
+      form(action='/contact', method='POST')
+        .form-row
+          .form-group.col-md-6
+            label(for='inputName') Name
+            input.form-control(type='text', name='name', placeholder='Your name here', autocomplete='name')
+          .form-group.col-md-6
+            label(for='inputEmail4') Email
+            input.form-control(type='email', name='email', placeholder='Your email here', autocomplete='email')
+          .form-group.col-12
+            label(for='inputMessage') Message
+            textarea.form-control(type='text', name='message' placeholder='Your message here', rows='10')
+          .form-group.col-12
+            button.btn.btn-primary.py-3.px-5(type='submit') Contact

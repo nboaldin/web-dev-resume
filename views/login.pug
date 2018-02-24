@@ -1,0 +1,22 @@
+extends layout
+block content
+  .jumbotron
+    .container
+      .row
+        .col-lg
+          h1.display-4.pink-text #{title}
+          p.pink-text #{headerSub}
+        .col-lg
+  .container
+    h2 Log In, Friend
+  .container.form-wrap
+      p.red-text #{msg}
+      form(action='/login', method='POST')
+        .form-row.col-6
+          .form-group
+            label(for='inputEmail4') Email
+            input.form-control(type='email', name='email', placeholder='Your email here', autocomplete='email')
+          .form-group
+            label(for='pw') Password:
+            input#pw.form-control(type='password' name='password')
+          button.btn.btn-primary(type='submit') Log In

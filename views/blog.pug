@@ -1,0 +1,21 @@
+extends layout.pug
+block content
+  .jumbotron
+    .container
+      .row
+        .col-lg
+          h1.display-4.pink-text #{title}
+          p.pink-text #{headerSub}
+        .col-lg
+          div(style='width:100%;height:0;padding-bottom:62%;position:relative;')
+            iframe.giphy-embed(src='https://giphy.com/embed/DvyxIpxw9cCuQ', width='100%', height='100%', style='position:absolute', frameborder='0', allowfullscreen='')
+  h2 With no futher ado...
+  ul
+    each post in posts
+      li.my-5
+          span= post.date
+          h3.pink-text= post.title
+          p= post.text
+
+
+      
